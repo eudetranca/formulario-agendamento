@@ -1,18 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-    showStep(1); // Exibir a primeira etapa
+    showStep(1);
 
     document.getElementById('pedidoForm').addEventListener('submit', function(event) {
         event.preventDefault();
         const mensagem = gerarMensagemWhatsApp();
         const telefoneWhatsApp = '5531973055213';
 
-        // Gerar o link do WhatsApp usando crase para interpolação
         const link = `https://wa.me/${telefoneWhatsApp}?text=${encodeURIComponent(mensagem)}`;
-
-        // Imprimir o link no console para verificar
-        console.log("Link gerado:", link);
-
-        // Abrir o link em uma nova janela
         window.open(link, '_blank');
     });
 });
@@ -34,23 +28,22 @@ function prevStep(step) {
 }
 
 function gerarMensagemWhatsApp() {
-    const nome = document.getElementById('nome').value;
-    const idade = document.getElementById('idade').value;
-    const sexo = document.getElementById('sexo').value;
-    const telefone = document.getElementById('telefone').value;
+    const nome = document.getElementById('nome').value || 'Não informado';
+    const idade = document.getElementById('idade').value || 'Não informado';
+    const sexo = document.getElementById('sexo').value || 'Não informado';
+    const telefone = document.getElementById('telefone').value || 'Não informado';
     const email = document.getElementById('email').value || 'Não fornecido';
     const instagram = document.getElementById('instagram').value || 'Não fornecido';
-    const marcarInstagram = document.getElementById('marcarInstagram').value;
-    const confortoPostagem = document.getElementById('confortoPostagem').value;
-    const sensibilidade = document.getElementById('sensibilidade').value;
-    const comprimento = document.getElementById('comprimento').value;
-    const dias = document.getElementById('dias').value;
-    const horario = document.getElementById('horario').value;
-    const tipoTranca = document.getElementById('tipoTranca').value;
-    const material = document.getElementById('material').value;
+    const marcarInstagram = document.getElementById('marcarInstagram').value || 'Não informado';
+    const confortoPostagem = document.getElementById('confortoPostagem').value || 'Não informado';
+    const sensibilidade = document.getElementById('sensibilidade').value || 'Não informado';
+    const comprimento = document.getElementById('comprimento').value || 'Não informado';
+    const dias = document.getElementById('dias').value || 'Não informado';
+    const horario = document.getElementById('horario').value || 'Não informado';
+    const tipoTranca = document.getElementById('tipoTranca').value || 'Não informado';
+    const material = document.getElementById('material').value || 'Não informado';
     const observacoes = document.getElementById('observacoes').value || 'Nenhuma';
 
-    // Montar a mensagem para o WhatsApp
     return `Olá, gostaria de realizar um pré-agendamento. Aqui estão meus dados:
     
     Nome: ${nome}
@@ -67,5 +60,7 @@ function gerarMensagemWhatsApp() {
     Horário: ${horario}
     Tipo de trança: ${tipoTranca}
     Material: ${material}
-    Observações: ${observacoes}`;
+    Observações: ${observacoes}
+    
+    ⚠️ Para concluir o pré-agendamento, por favor envie uma foto do seu cabelo aqui no WhatsApp.`;
 }

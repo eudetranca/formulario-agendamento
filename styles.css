@@ -1,39 +1,32 @@
 body {
-    font-family: Arial, sans-serif; /* Define a fonte padrão */
-    background-image: url('imagens/PapelDeParede.png'); /* Substitua pelo caminho da sua imagem de fundo */
-    background-size: cover; /* Faz a imagem cobrir toda a tela */
-    margin: 0; /* Remove margens padrão */
-    padding: 0; /* Remove preenchimento padrão */
-    height: 100vh; /* Faz o corpo da página ocupar 100% da altura da janela */
-    display: flex; /* Usa Flexbox para centralizar o formulário */
-    justify-content: center; /* Centraliza o formulário horizontalmente */
-    align-items: center; /* Centraliza o formulário verticalmente */
-    overflow: hidden; /* Remove a barra de rolagem */
+    font-family: Arial, sans-serif;
+    background-image: url('imagens/PapelDeParede.png');
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 20px;
 }
 
 .container {
-    width: 80%;
+    width: 90%;
     max-width: 600px;
     margin: 0 auto;
-    padding: 50px;
+    padding: 20px;
     background: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }
 
 .instagram {
-    width: 15%;
+    width: 25%;
+    max-width: 60px;
     height: auto;
-}
-
-.service-img {
-    width: 100%;
-    height: auto;
-}
-
-h1 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, sans-serif;
-    text-align: center;
-    color: #333;
+    display: block;
+    margin: 10px auto;
 }
 
 .step {
@@ -51,10 +44,18 @@ button {
     padding: 10px 15px;
     cursor: pointer;
     margin-top: 10px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 button:hover {
     background-color: #0097B2;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 label {
@@ -68,9 +69,25 @@ input, select, textarea {
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    box-sizing: border-box;
 }
 
 textarea {
     height: 100px;
     resize: none;
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    h2 {
+        font-size: 1.2rem;
+    }
+    p {
+        font-size: 0.9rem;
+    }
+    .container {
+        padding: 15px;
+    }
 }
