@@ -1,6 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
     showStep(1);
 
+    // Abrir calendário para selecionar dias
+    const diasInput = document.getElementById('dias');
+    diasInput.addEventListener('click', () => {
+        let selected = prompt(
+            "Digite os dias disponíveis separados por vírgula.\nExemplo: quinta-feira, 02 de outubro, sábado, 04 de outubro"
+        );
+        if(selected) diasInput.value = selected;
+    });
+
     document.getElementById('pedidoForm').addEventListener('submit', function(event) {
         event.preventDefault();
         const mensagem = gerarMensagemWhatsApp();
@@ -46,21 +55,21 @@ function gerarMensagemWhatsApp() {
 
     return `Olá, gostaria de realizar um pré-agendamento. Aqui estão meus dados:
     
-    Nome: ${nome}
-    Idade: ${idade}
-    Sexo: ${sexo}
-    Telefone: ${telefone}
-    E-mail: ${email}
-    Instagram: ${instagram}
-    Podemos marcar no Instagram: ${marcarInstagram}
-    Confortável em postar fotos: ${confortoPostagem}
-    Couro cabeludo sensível: ${sensibilidade}
-    Comprimento do cabelo: ${comprimento} cm
-    Dias disponíveis: ${dias}
-    Horário: ${horario}
-    Tipo de trança: ${tipoTranca}
-    Material: ${material}
-    Observações: ${observacoes}
-    
-    ⚠️ Para concluir o pré-agendamento, por favor envie uma foto do seu cabelo aqui no WhatsApp.`;
+Nome: ${nome}
+Idade: ${idade}
+Sexo: ${sexo}
+Telefone: ${telefone}
+E-mail: ${email}
+Instagram: ${instagram}
+Podemos marcar no Instagram: ${marcarInstagram}
+Confortável em postar fotos: ${confortoPostagem}
+Couro cabeludo sensível: ${sensibilidade}
+Comprimento do cabelo: ${comprimento} cm
+Dias disponíveis: ${dias}
+Horário: ${horario}
+Tipo de trança: ${tipoTranca}
+Material: ${material}
+Observações: ${observacoes}
+
+⚠️ Para concluir o pré-agendamento, por favor envie uma foto do seu cabelo aqui no WhatsApp.`;
 }

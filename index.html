@@ -80,7 +80,7 @@
             <!-- ETAPA 4: Agendamento -->
             <div id="step4" class="step">
                 <label for="dias">Dias disponíveis:</label>
-                <input type="text" id="dias" name="dias">
+                <input type="text" id="dias" name="dias" readonly placeholder="Clique para selecionar os dias">
 
                 <label for="horario">Horário:</label>
                 <select id="horario" name="horario">
@@ -90,7 +90,19 @@
                 </select>
 
                 <label for="tipoTranca">Tipo de trança:</label>
-                <input type="text" id="tipoTranca" name="tipoTranca">
+                <select id="tipoTranca" name="tipoTranca">
+                    <option value="">Selecione</option>
+                    <option value="Box Braids">Box Braids</option>
+                    <option value="Trança Nagô">Trança Nagô</option>
+                    <option value="Fulani Braids">Fulani Braids</option>
+                    <option value="Gypsy Braids">Gypsy Braids</option>
+                    <option value="Bohemian Braids">Bohemian Braids</option>
+                    <option value="Butterfly Braids">Butterfly Braids</option>
+                    <option value="French Curl Braids">French Curl Braids</option>
+                    <option value="Trança Espiral">Trança Espiral</option>
+                    <option value="Faux Locs">Faux Locs</option>
+                    <option value="Trança Boxeadora">Trança Boxeadora</option>
+                </select>
 
                 <label for="material">Material:</label>
                 <input type="text" id="material" name="material">

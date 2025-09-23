@@ -1,3 +1,4 @@
+/* BODY */
 body {
     font-family: Arial, sans-serif;
     background-image: url('imagens/PapelDeParede.png');
@@ -11,6 +12,7 @@ body {
     padding-top: 20px;
 }
 
+/* CONTAINER */
 .container {
     width: 90%;
     max-width: 600px;
@@ -21,6 +23,7 @@ body {
     box-sizing: border-box;
 }
 
+/* LOGO */
 .instagram {
     width: 25%;
     max-width: 60px;
@@ -29,6 +32,7 @@ body {
     margin: 10px auto;
 }
 
+/* ETAPAS */
 .step {
     display: none;
 }
@@ -37,6 +41,7 @@ body {
     display: block;
 }
 
+/* BOTÕES */
 button {
     background-color: #FFA843;
     color: white;
@@ -52,12 +57,7 @@ button:hover {
     background-color: #0097B2;
 }
 
-.buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
+/* INPUTS, SELECTS E TEXTAREAS */
 label {
     display: block;
     margin: 10px 0 5px;
@@ -77,6 +77,7 @@ textarea {
     resize: none;
 }
 
+/* RESPONSIVO */
 @media (max-width: 480px) {
     h1 {
         font-size: 1.5rem;
