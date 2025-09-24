@@ -1,22 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
     showStep(1);
 
-    // Abrir calendário para selecionar dias
     const diasInput = document.getElementById('dias');
     diasInput.addEventListener('click', () => {
         let selected = prompt(
             "Digite os dias disponíveis separados por vírgula.\nExemplo: quinta-feira, 02 de outubro, sábado, 04 de outubro"
         );
-        if(selected) diasInput.value = selected;
+        if (selected) diasInput.value = selected;
     });
 
-    document.getElementById('pedidoForm').addEventListener('submit', function(event) {
+    document.getElementById('pedidoForm').addEventListener('submit', function (event) {
         event.preventDefault();
         const mensagem = gerarMensagemWhatsApp();
         const telefoneWhatsApp = '5531973055213';
 
         const link = `https://wa.me/${telefoneWhatsApp}?text=${encodeURIComponent(mensagem)}`;
-        window.open(link, '_blank');
+        window.location.href = link;
     });
 });
 
@@ -54,7 +53,7 @@ function gerarMensagemWhatsApp() {
     const observacoes = document.getElementById('observacoes').value || 'Nenhuma';
 
     return `Olá, gostaria de realizar um pré-agendamento. Aqui estão meus dados:
-    
+
 Nome: ${nome}
 Idade: ${idade}
 Sexo: ${sexo}
