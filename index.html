@@ -12,7 +12,6 @@
         <h1>Formulário de Pré-Agendamento</h1>
 
         <form id="pedidoForm">
-
             <!-- ETAPA 1: Dados pessoais -->
             <div id="step1" class="step active">
                 <label for="nome">Nome:</label>
@@ -82,7 +81,7 @@
                 <label for="dias">Dias disponíveis:</label>
                 <input type="text" id="dias" name="dias" readonly placeholder="Clique para selecionar os dias">
 
-                <label for="horario">Preferencia de Horário:</label>
+                <label for="horario">Preferência de Horário:</label>
                 <select id="horario" name="horario">
                     <option value="">Selecione</option>
                     <option value="Manhã">Manhã</option>
@@ -114,7 +113,7 @@
                 <p><strong>Atenção:</strong> Após enviar o pré-agendamento, você deverá enviar uma foto do seu cabelo pelo WhatsApp.</p>
 
                 <button type="button" onclick="prevStep(3)">Voltar</button>
-                <button type="submit">Enviar Pré-Agendamento</button>
+                <button type="button" id="enviarBtn">Enviar Pré-Agendamento</button>
             </div>
         </form>
     </div>

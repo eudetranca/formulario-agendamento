@@ -9,11 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (selected) diasInput.value = selected;
     });
 
-    document.getElementById('pedidoForm').addEventListener('submit', function (event) {
-        event.preventDefault();
+    document.getElementById('enviarBtn').addEventListener('click', function () {
         const mensagem = gerarMensagemWhatsApp();
         const telefoneWhatsApp = '5531973055213';
-
         const link = `https://wa.me/${telefoneWhatsApp}?text=${encodeURIComponent(mensagem)}`;
         window.location.href = link;
     });
