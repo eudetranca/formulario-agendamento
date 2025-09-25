@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.getElementById('enviarBtn').addEventListener('click', function () {
         const mensagem = gerarMensagemWhatsApp();
-        const telefoneWhatsApp = '5531973055213';
+        const telefoneWhatsApp = '5531986497971';
         const link = `https://wa.me/${telefoneWhatsApp}?text=${encodeURIComponent(mensagem)}`;
         window.location.href = link;
     });
