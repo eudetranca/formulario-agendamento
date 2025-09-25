@@ -21,9 +21,13 @@ https://eudetranca.github.io/formulario-agendamento/
 
 📁 Estrutura do Projeto
 formulario-agendamento/
+
 ├── index.html
+
 ├── style.css
+
 ├── script.js
+
 └── README.md
 
 
